@@ -1,4 +1,4 @@
-package com.examly.springapp.model;
+package home.coder.project.workspace.springapp.src.main.java.com.examly.springapp.model;
 
 public class Laptop {
     private int laptopId;
