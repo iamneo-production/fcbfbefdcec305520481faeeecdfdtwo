@@ -1,41 +1,33 @@
 package com.examly.springapp.service;
 
 import com.examly.springapp.model.Laptop;
+import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
-
-interface ApiService1 {
-
-    boolean createLaptop(Laptop laptop);
-
-    Laptop getLaptopById(int laptopId);
-
-    List<Laptop> getAllLaptops();
-}
 
 @Service
-public class ApiService implements ApiService1 {
+public class ApiService {
+    private List<Laptop> laptopList = new ArrayList<>();
 
-    private Map<Integer, Laptop> laptops = new HashMap<>();
-
-    @Override
-    public boolean createLaptop(Laptop laptop) {
-        int laptopId = laptops.size() + 1;
-        laptop.setLaptopId(laptopId);
-        laptops.put(laptopId, laptop);
-        return true;
+    public boolean addLaptop(Laptop laptop) {
+        // Implement the logic to add a laptop to the list
+        // Return true if successful, false otherwise
+        // You can use laptopList.add(laptop) here
+        // Implement your logic as per your requirements
+        return false;
     }
 
-    @Override
     public Laptop getLaptopById(int laptopId) {
-        return laptops.get(laptopId);
+        // Implement the logic to retrieve a laptop by ID
+        // You can use a loop to iterate through laptopList
+        // Return the laptop object if found, null otherwise
+        return null;
     }
 
-    @Override
     public List<Laptop> getAllLaptops() {
-        return new ArrayList<>(laptops.values());
+        // Implement the logic to retrieve all laptops
+        // Return the list of all laptops
+        return laptopList;
     }
 }
