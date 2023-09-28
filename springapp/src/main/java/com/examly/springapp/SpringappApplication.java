@@ -12,5 +12,3 @@ public class SpringappApplication {
 	}
 
 }
-
-//(exclude = {DataSourceAutoConfiguration.class})
