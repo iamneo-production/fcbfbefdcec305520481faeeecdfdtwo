@@ -8,10 +8,15 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/laptop")
+@RequestMapping("/api/laptops")
 public class LaptopController {
+
+    private final ApiService apiService;
+
     @Autowired
-    private ApiService apiService;
+    public LaptopController(ApiService apiService) {
+        this.apiService = apiService;
+    }
 
     @PostMapping("/")
     public boolean addLaptop(@RequestBody Laptop laptop) {

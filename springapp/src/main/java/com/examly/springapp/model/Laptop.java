@@ -6,6 +6,7 @@ public class Laptop {
     private int laptopPrice;
 
     public Laptop() {
+        // Default constructor
     }
 
     public Laptop(int laptopId, String laptopBrand, int laptopPrice) {
@@ -14,25 +15,26 @@ public class Laptop {
         this.laptopPrice = laptopPrice;
     }
 
-    // Getters and setters for the variables
+    // Getter methods
     public int getLaptopId() {
         return laptopId;
-    }
-
-    public void setLaptopId(int laptopId) {
-        this.laptopId = laptopId;
     }
 
     public String getLaptopBrand() {
         return laptopBrand;
     }
 
-    public void setLaptopBrand(String laptopBrand) {
-        this.laptopBrand = laptopBrand;
-    }
-
     public int getLaptopPrice() {
         return laptopPrice;
+    }
+
+    // Setter methods
+    public void setLaptopId(int laptopId) {
+        this.laptopId = laptopId;
+    }
+
+    public void setLaptopBrand(String laptopBrand) {
+        this.laptopBrand = laptopBrand;
     }
 
     public void setLaptopPrice(int laptopPrice) {
