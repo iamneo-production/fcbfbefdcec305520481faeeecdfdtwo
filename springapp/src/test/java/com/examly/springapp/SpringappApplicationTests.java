@@ -35,15 +35,15 @@ public class SpringappApplicationTests {
     }
 
    
-// @Test
-// void testGetOne() throws Exception {
-//     // Assuming the contactId of the contact added in test_case1 is 1000
-//     mockMvc.perform(MockMvcRequestBuilders.get("/10000")
-//             .accept(MediaType.APPLICATION_JSON))
-//             .andExpect(MockMvcResultMatchers.status().isOk())
-//             .andExpect(jsonPath("$.laptopBrand").value("Medicine"))
-//             .andReturn();
-// }
+@Test
+void testGetOne() throws Exception {
+    // Assuming the contactId of the contact added in test_case1 is 1000
+    mockMvc.perform(MockMvcRequestBuilders.get("/10000")
+            .accept(MediaType.APPLICATION_JSON))
+            .andExpect(MockMvcResultMatchers.status().isOk())
+            .andExpect(jsonPath("$.laptopBrand").value("Medicine"))
+            .andReturn();
+}
 
 @Test
 public void testGetOne() throws Exception {
