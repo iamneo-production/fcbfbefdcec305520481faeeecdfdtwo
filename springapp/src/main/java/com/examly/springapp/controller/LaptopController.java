@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
+@RequestMapping("/api/laptops")
 public class LaptopController {
     @Autowired
     private ApiService apiService;
