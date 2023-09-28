@@ -24,8 +24,8 @@ public class LaptopController {
     }
 
     @GetMapping("/{laptopId}")
-    public Laptop getLaptopById(@PathVariable int laptopId) {
-        return apiService.getLaptopById(laptopId);
+    public Laptop getLaptop(@PathVariable int laptopId) {
+        return apiService.getLaptop(laptopId);
     }
 
     @GetMapping("/")

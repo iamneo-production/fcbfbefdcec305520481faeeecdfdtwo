@@ -6,7 +6,6 @@ public class Laptop {
     private int laptopPrice;
 
     public Laptop() {
-        // Default constructor
     }
 
     public Laptop(int laptopId, String laptopBrand, int laptopPrice) {

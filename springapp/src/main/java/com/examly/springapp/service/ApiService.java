@@ -5,29 +5,29 @@ import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class ApiService {
-    private List<Laptop> laptopList = new ArrayList<>();
+
+    private final List<Laptop> laptops = new ArrayList<>();
 
     public boolean addLaptop(Laptop laptop) {
-        // Implement the logic to add a laptop to the list
+        // Implement logic to add a laptop to the list
         // Return true if successful, false otherwise
-        // You can use laptopList.add(laptop) here
-        // Implement your logic as per your requirements
-        return false;
+        return laptops.add(laptop);
     }
 
-    public Laptop getLaptopById(int laptopId) {
-        // Implement the logic to retrieve a laptop by ID
-        // You can use a loop to iterate through laptopList
-        // Return the laptop object if found, null otherwise
-        return null;
+    public Laptop getLaptop(int laptopId) {
+        // Implement logic to retrieve a laptop by ID
+        Optional<Laptop> laptop = laptops.stream()
+                .filter(l -> l.getLaptopId() == laptopId)
+                .findFirst();
+        return laptop.orElse(null);
     }
 
     public List<Laptop> getAllLaptops() {
-        // Implement the logic to retrieve all laptops
-        // Return the list of all laptops
-        return laptopList;
+        // Implement logic to retrieve all laptops
+        return laptops;
     }
 }
