@@ -10,7 +10,7 @@ import java.util.Optional;
 @Service
 public class ApiService {
 
-    private final List<Laptop> laptops = new ArrayList<>();
+    List<Laptop> laptops = new ArrayList<>();
 
     public Laptop addLaptop(Laptop laptop) {
         // Implement logic to add a laptop to the list
