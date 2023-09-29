@@ -11,9 +11,10 @@ import java.util.List;
 @RequestMapping("api/laptops")
 public class LaptopController {
 
-    private final ApiService apiService;
+@Autowired
+    ApiService apiService;
 
-    @Autowired
+    
     public LaptopController(ApiService apiService) {
         this.apiService = apiService;
     }
