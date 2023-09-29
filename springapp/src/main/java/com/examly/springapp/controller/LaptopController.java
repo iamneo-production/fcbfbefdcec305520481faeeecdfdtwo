@@ -19,7 +19,7 @@ public class LaptopController {
     }
 
     @PostMapping("/")
-    public boolean addLaptop(@RequestBody Laptop laptop) {
+    public Laptop addLaptop(@RequestBody Laptop laptop) {
         return apiService.addLaptop(laptop);
     }
 

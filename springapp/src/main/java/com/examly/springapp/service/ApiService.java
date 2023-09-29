@@ -12,10 +12,10 @@ public class ApiService {
 
     private final List<Laptop> laptops = new ArrayList<>();
 
-    public boolean addLaptop(Laptop laptop) {
+    public Laptop addLaptop(Laptop laptop) {
         // Implement logic to add a laptop to the list
         // Return true if successful, false otherwise
-        return laptops.add(laptop);
+        return laptop;
     }
 
     public Laptop getLaptop(int laptopId) {
